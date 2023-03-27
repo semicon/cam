@@ -68,7 +68,7 @@
     
     const downloadLink = document.createElement('a');
     downloadLink.setAttribute('download', `capture-${new Date().getTime()}.png`);
-    img.toBlob((blob) => {
+    canvas.toBlob((blob) => {
       downloadLink.setAttribute('href', URL.createObjectURL(blob));
       downloadLink.click();
       alert("nnnnnnnnnnnnnnn")
