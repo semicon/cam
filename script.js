@@ -65,7 +65,7 @@
     canvas.getContext("2d").drawImage(video, 0, 0);
     img.src = canvas.toDataURL("image/png");
     screenshotsContainer.prepend(img);
-    return Canvas2Image.saveAsPNG(img);
+    screenshotsContainer.saveAsPNG(img);
   });
 
   // switch camera
