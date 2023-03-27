@@ -71,6 +71,7 @@
     screenshotsContainer.toBlob((blob) => {
       downloadLink.setAttribute('href', URL.createObjectURL(blob));
       downloadLink.click();
+      alert("nnnnnnnnnnnnnnn")
     });
     
   });
