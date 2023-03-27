@@ -66,6 +66,14 @@
     img.src = canvas.toDataURL("image/png");
     screenshotsContainer.prepend(img);
     screenshotsContainer.saveAsPNG(img);
+    
+    const downloadLink = document.createElement('a');
+  downloadLink.setAttribute('download', `capture-${new Date().getTime()}.png`);
+  outputCanvas.toBlob((blob) => {
+    downloadLink.setAttribute('href', URL.createObjectURL(blob));
+    downloadLink.click();
+  });
+    
   });
 
   // switch camera
